@@ -1,15 +1,35 @@
-function initialize() {
+
+
+window.judgement_day = window.judgement_day || {}
+
+
+function initialize_autocomplete() {
+  var input = ( document.getElementById('pac-input'));
+  if(input)
+  {
+    var autocomplete = new google.maps.places.Autocomplete(input);
+
+    window.judgement_day.header_autocomplete = autocomplete;
+
+    // Install Handler?
+  }
+}
+
+function initialize_map_canvas()
+{
+  var mapElement = document.getElementById('map-canvas');
+
+  if(mapElement)
+  {
   var mapOptions = {
     center: new google.maps.LatLng(-33.8688, 151.2195),
     zoom: 13
   };
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
+  var map = new google.maps.Map(mapElement,
     mapOptions);
 
-  var input = /** @type {HTMLInputElement} */(
-      document.getElementById('pac-input'));
+  var autocomplete = window.judgement_day.header_autocomplete;
 
-  var autocomplete = new google.maps.places.Autocomplete(input);
   autocomplete.bindTo('bounds', map);
 
   var infowindow = new google.maps.InfoWindow();
@@ -69,5 +89,11 @@ function initialize() {
   setupClickListener('changetype-establishment', ['establishment']);
   setupClickListener('changetype-geocode', ['geocode']);
 }
+}
 
-google.maps.event.addDomListener(window, 'load', initialize);
+
+$(window).load(initialize_autocomplete);
+
+$(window).load(initialize_map_canvas);
+
+
