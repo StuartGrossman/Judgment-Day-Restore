@@ -6,7 +6,7 @@ class CompaniesController < ApplicationController
 	 	@company = Company.new(params[:id])
 	 end
 	 def show
-	 	@compaies = Company.all
+	 	@companies = Company.all
 	 end
 	 def new
 	 	@companies = Company.all

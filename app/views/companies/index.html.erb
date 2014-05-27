@@ -5,3 +5,36 @@
     
   
     <div class="boxmap" id="map-canvas"></div>
+
+
+ <!-- the comment box -->
+          <div class="well">
+            <h4>Leave a Comment:</h4>
+            <form role="form">
+              <div class="form-group">
+                <textarea class="form-control" name="body" id="commentBody" rows="3"></textarea>
+              </div>
+              <button type="submit" id="newcomment" value="comment" class="btn btn-primary">Submit</button>
+              <div id="new-comment">
+              </div>
+            </form>
+          </div>
+          <script type="text/javascript">
+  
+     var newcomment = document.getElementById("newcomment");
+      var newCommentForm = document.getElementById("new-comment")
+      var newCommentBody = document.getElementById("commentBody")
+  
+      newcomment.onclick= function(e) {
+     var str ="What is your name?";
+      var response= window.prompt("What is your name?")
+
+       e.preventDefault();
+        var p = document.createElement("p");
+      p.innerText=response + "'s " + "Comment:  "+newCommentBody.value;
+      newCommentForm.appendChild(p);
+      newCommentForm.reset();
+
+    
+  }
+</script>
