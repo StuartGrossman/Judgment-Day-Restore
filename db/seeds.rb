@@ -1,0 +1,1 @@
+comp = Company.create!(title: "General Assembly", description: "We teach code", size: "50", industry: "tech", location: "414 brannan St, San Francisco California", url: "https://generalassemb.ly" )
