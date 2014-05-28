@@ -4,6 +4,7 @@ class CompaniesController < ApplicationController
 	 end
 	 def create
 	 	@company = Company.new(params[:id])
+	 	@com
 	 end
 	 def show
 	 	@companies = Company.all

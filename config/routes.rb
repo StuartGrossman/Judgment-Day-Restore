@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :layouts
   get 'about' => 'companies#about'
   root 'home_page#home'
+  resources :linkedin_api
 
 end
 # Prefix Verb   URI Pattern                    Controller#Action
