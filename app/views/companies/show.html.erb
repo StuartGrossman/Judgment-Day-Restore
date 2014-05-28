@@ -6,7 +6,7 @@
 <% @companies.each do |x| %>
 
   <li> <%= x.title %></li> 
-  <li><%=x.url %></li>
+  <li><%= link_to x.url %></li>
   <li><%=x.location %></li>
   <li><%=x.size %></li>
   <li><%=x.industry %></li>
