@@ -16,5 +16,6 @@ class LinkedinApiController < ApplicationController
      
     end
 
+
 end
 

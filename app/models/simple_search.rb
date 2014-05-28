@@ -22,7 +22,7 @@ class SimpleSearch
     scope
   end
 
-  def self.get_params(params, as = :simple_search)
-    params.require(as).permit(:q) if params.has_key? as
-  end
+  # def self.get_params(params, as = :simple_search)
+  #   params.require(as).permit(:q) if params.has_key? as
+  # end
 end
