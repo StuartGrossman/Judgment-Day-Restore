@@ -1,0 +1,21 @@
+<h1>RESULTS</h1>
+<h4> Please select a Company! </h4>
+<% @response.each do |k,v| %>
+	<% v.each do |x| %>
+	<% i = 0 %>
+	<% while i <= x[1].length - 1 %>
+<h5> " <%= x[1][i]["headLine"].gsub('<strong>', ' ').gsub('</strong>', ' ') %> " </h5>
+	--------
+	<%= x[1][i]["id"] %>
+	--------
+	<%= x[1][i]["url"] %>
+	--------
+	<%= x[1][i]["imageUrl"] %>
+	--------
+	<%= x[1][i]["subLine"] %>
+	--------
+<br>
+  <% i += 1 %>
+		<% end %>
+	<% end %>
+<% end %>

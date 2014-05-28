@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+	get 'search' => 'linkedin_api#search'
+	get 'results' => 'linkedin_api#results'
   devise_for :users
   resources :companies
   resources :layouts
