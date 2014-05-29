@@ -13,9 +13,9 @@ class LinkedinApiController < ApplicationController
 	  	@response.to_s
     end
     def add
-    	@results = params[:name]
-    	# @company_id = @results
-   #  	binding.pry
+    	@results = params[:id]
+    	@company_id = @results
+   
  		# client = LinkedIn::Client.new('756wwpcnybgkfj', 'MevJ0KO5RdBA64HE') 
  		# @company_data = client.company(:id => @company_id, :fields=>["universal-name","email-domains","company-type","ticker","website-url","industries","status","logo-url","square-logo-url","blog-rss-url","twitter-id","employee-count-range","specialties","locations","description","stock-exchange","founded-year","end-year","num-followers"])
      	#@results = params[:company]
