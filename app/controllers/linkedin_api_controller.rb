@@ -20,10 +20,7 @@ class LinkedinApiController < ApplicationController
    
  		client = LinkedIn::Client.new('756wwpcnybgkfj', 'MevJ0KO5RdBA64HE') 
  		@company_data = client.company(:id => @company_id, :fields=>["universal-name","email-domains","company-type","ticker","website-url","industries","status","logo-url","square-logo-url","blog-rss-url","twitter-id","employee-count-range","specialties","locations","description","stock-exchange","founded-year","end-year","num-followers"])
-<<<<<<< HEAD
 
- 
-=======
      	
 
      	#@results = params[:company]
@@ -35,7 +32,7 @@ class LinkedinApiController < ApplicationController
 	  # 	response = Typhoeus.get("http://www.linkedin.com/ta/federator?query=#{company}&types=company,sitefeature,email-domains")
 	  # 	@response = JSON.parse(response.body)
 	  # 	@response.to_s
->>>>>>> b3735779554d2988a1b46238eb020f09bd959b80
+
     end
     def show
     	

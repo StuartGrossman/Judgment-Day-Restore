@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 <br>
 <br>
 <br>
@@ -48,22 +46,21 @@
 <%= form_for @new_company do |f| %>
   <%= f.label :universal_name %>:
   <%= f.text_field :universal_name, :value => @universal_name%><br />
->>>>>>> b3735779554d2988a1b46238eb020f09bd959b80
 
   <%= f.label :description %>:
-  <%= f.text_area :description, :value => %><br />
+  <%= f.text_area :description, :value => @description %><br />
 
   <%= f.label :logo_url %>:
-  <%= f.text_area :logo_url, :value => %><br />
+  <%= f.text_area :logo_url, :value => @logo_url %><br />
 
   <%= f.label :website_url %>:
-  <%= f.text_area :website_url, :value => %><br />
+  <%= f.text_area :website_url, :value => @website_url %><br />
 
   <%= f.label :email_domains %>:
-  <%= f.text_area :email_domains, :value => %><br />
+  <%= f.text_area :email_domains, :value => @email_domains %><br />
 
   <%= f.label :founded_year %>:
-  <%= f.text_area :founded_year, :value => %><br />
+  <%= f.text_area :founded_year, :value => @founded_year %><br />
 
   <%= f.label :location %>:
   <%= f.text_area :location, :value => @location %><br />
@@ -73,27 +70,5 @@
 
   <%= f.submit %>
 <% end %>
-<<<<<<< HEAD
-<%= hash %>
-=======
-
-<br>
-<%= @description%>
-<br>
-<%= @logo_url%>
-<br>
-<%= @website_url%>
-<br>
-<%= @email_domains%>
-<br>
-<%= @founded_year%>
-<br>
-<%= @industries%>
-<br>
-<%= @locations%>
-<br>
-<%= @num_followers%>
 
 
-
->>>>>>> b3735779554d2988a1b46238eb020f09bd959b80
