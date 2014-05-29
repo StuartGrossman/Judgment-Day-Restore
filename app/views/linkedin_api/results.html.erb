@@ -1,21 +1,31 @@
-<h1>RESULTS</h1>
+<br>
+<br>
+<br>
+<center><h1>RESULTS</h1></center>
+<br>
+<br>
+<br>
 <h4> Please select a Company! </h4>
+
 <% @response.each do |k,v| %>
 	<% v.each do |x| %>
 	<% i = 0 %>
 	<% while i <= x[1].length - 1 %>
-<h5> " <%= x[1][i]["headLine"].gsub('<strong>', ' ').gsub('</strong>', ' ') %> " </h5>
-	--------
-	<%= x[1][i]["id"] %>
-	--------
-	<%= x[1][i]["url"] %>
-	--------
-	<%= x[1][i]["imageUrl"] %>
-	--------
+<h5> <%= @name = x[1][i]["headLine"].gsub('<strong>', ' ').gsub('</strong>', ' ') %> </h5>
 	<%= x[1][i]["subLine"] %>
-	--------
-<br>
-  <% i += 1 %>
+	<%= x[1][i]["id"] %>
+
+	<br>
+	<%= x[1][i]["url"] %>
+	<br>
+	<img src=" <%= x[1][i]['imageUrl'] %>"/> 
+	<br>
+	<%= form_tag("/add", method: "get") do %>
+  	<%= label_tag(:company, "Add Company") %>
+  	<%= hidden_field_tag(:company,  @name)  %>
+  	<%= submit_tag(@name) %>
+  		<% i += 1 %>
+  			<% end %>
 		<% end %>
 	<% end %>
 <% end %>
