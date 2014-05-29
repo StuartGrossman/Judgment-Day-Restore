@@ -6,22 +6,86 @@
 <br>
 <br>
 <br>
+<% @parsed_data = [] %>
+<% @company_data.map do |x| %>
+	<% x.each do |m| %>
+	<% @parsed_data << Hash[m, x[1]] %>
+	<% end %>
+<% end %>
+<% @parsed_data.each do |x| %>
+<% new_arr = [] %>
+	<% if x.has_key?("universal_name") %>
+	<% @universal_name = x['universal_name'] %>
+	<% end %>
+	<% if x.has_key?('description') %>
+	<% @description = x['description'] %>
+	<% end %>
+	<% if x.has_key?('logo_url') %>
+	<% @logo_url = x['logo_url'] %>
+	<% end %>
+	<% if x.has_key?('website_url') %>
+	<% @website_url = x['website_url'] %>
+	<% end %>
+	<% if x.has_key?('email_domains') %>
+	<% @email_domains = x['email_domains'] %>
+	<% end %>
+	<% if x.has_key?('founded_year') %>
+	<% @founded_year = x.has_key?('founded_year') %>
+	<% end %>
+	<% if x.has_key?('industries') %>
+	<% @industries = x['industries'][0].to_s %>
+	<% end %>
+	<% if x.has_key?('locations') %>
+	<% @locations = x['locations']%>
+	<% end %>
+	<% if x.has_key?('num_followers') %>
+	<% @num_followers = x['num_followers'] %>
+	<% end %>
+<% end %>
+<%= form_for @new_company do |f| %>
+  <%= f.label :universal_name %>:
+  <%= f.text_field :universal_name, :value => @universal_name%><br />
 
-<%#= @company_data.each do |x| %>
-<br>
-<%#= x %>
-<%# end %>
-<% data = [] %>
-<%= data << @company_data %>
-<%# @company_data.each do |x| %>
-<%# x.each_index do |index| %>
-<%# x.each do |info| %>
+  <%= f.label :description %>:
+  <%= f.text_area :description, :value => %><br />
 
-<%#= index %>
-<%# data_hash = {info => info} %>
+  <%= f.label :logo_url %>:
+  <%= f.text_area :logo_url, :value => %><br />
+
+  <%= f.label :website_url %>:
+  <%= f.text_area :website_url, :value => %><br />
+
+  <%= f.label :email_domains %>:
+  <%= f.text_area :email_domains, :value => %><br />
+
+  <%= f.label :founded_year %>:
+  <%= f.text_area :founded_year, :value => %><br />
+
+  <%= f.label :location %>:
+  <%= f.text_area :location, :value => @location %><br />
+
+  <%= f.label :num_followers %>:
+  <%= f.text_area :num_followers, :value => @num_followers %><br />
+
+  <%= f.submit %>
+<% end %>
+
 <br>
-<%#= data_hash %>
+<%= @description%>
 <br>
-<%# end %>
-<%# end %>
-<%# end %>
+<%= @logo_url%>
+<br>
+<%= @website_url%>
+<br>
+<%= @email_domains%>
+<br>
+<%= @founded_year%>
+<br>
+<%= @industries%>
+<br>
+<%= @locations%>
+<br>
+<%= @num_followers%>
+
+
+
