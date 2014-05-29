@@ -1,1 +1,10 @@
-<<h1>heklo</h1>
+<h1>heklo</h1>
+
+<% @companies.each do |company| %>
+      <p>
+     Name: <%= company.universal_name %><br><br>
+     Description: <%= company.description %><br><br>
+    Address: <%= company.location %>
+     </p>
+
+<% end %>

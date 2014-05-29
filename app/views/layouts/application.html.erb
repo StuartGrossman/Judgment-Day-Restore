@@ -7,82 +7,90 @@
   <%= csrf_meta_tags %>
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Fonts -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
-   
-   <!-- Core JavaScript Files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+  <!-- Fonts -->
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+
+  <!-- Core JavaScript Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
 
 </head>
 <body>
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="/">
-                   <!--  <i class="fa fa-play-circle"></i>  -->
-                    
-                     <span class="light"> Judgment Day</span> 
-                </a>
-            </div>
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="/">
+         <!--  <i class="fa fa-play-circle"></i>  -->
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <% if user_signed_in? %>
-                    <li class="page-scroll">
-                        <a href="/about">About us</a>
-                    </li>
-                    
-                    <li class="page-scroll"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-                    </li>
+         <span class="light"> Judgment Day</span> 
+       </a>
+     </div>
 
-                     <li class="page-scroll">
-                      <input class="searchCompany" id="pac-input" type="text" placeholder="Company" >
-                    </li>
-                    
-                     <% else %>    
-                    <li class="page-scroll">
-                        <a href="/users/sign_in">Sign in</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="/users/sign_up">Sign up</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="/about">About us</a>
-                    </li>
+     <!-- Collect the nav links, forms, and other content for toggling -->
+     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <% if user_signed_in? %>
+        <li class="page-scroll">
+          <a href="/about">About us</a>
+        </li>
 
-                    <li class="page-scroll">
-                        <input class="searchCompany" id="pac-input"type="text" placeholder="Company" >
-                    </li>
-        
-                    <% end %>
-                </ul>
+        <li class="page-scroll"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        </li>
 
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+        <li class="page-scroll">
+         <form action="/search">
+           <input class = "form-control" type="text" name="q" placeholder="Search?"></input>
+         </form>
+       </li>
+
+       <% else %>    
+       <li class="page-scroll">
+        <a href="/users/sign_in">Sign in</a>
+      </li>
+      <li class="page-scroll">
+        <a href="/users/sign_up">Sign up</a>
+      </li>
+      <li class="page-scroll">
+        <a href="/about">About us</a>
+      </li>
+
+      <li class="page-scroll">
+       <form action="/search">
+         <input class = "form-control" type="text" name="q" placeholder="Search?"></input>
+       </form>
+     </li>
+
+
+
+
+
+     <% end %>
+   </ul>
+
+ </div>
+ <!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
+</nav>
 <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
+<p class="alert alert-success"><%= notice %></p>
 <% end %>
 <% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
+<p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
 <%= yield %>
