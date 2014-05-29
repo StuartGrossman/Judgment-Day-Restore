@@ -2,12 +2,11 @@ class CompaniesController < ApplicationController
 	def index
 		@companies = Company.all
 	 end
-	 def create
-	 	@company = Company.new(params[:id])
-	 	@com
-	 end
+	 # def create
+	 # 	@new_company = Company.update_all(params)
+	 # end
 	 def show
-	 	@companies = Company.all
+	 	@company = Company.find(params[:id])
 	 end
 	 def new
 	 	@companies = Company.all
@@ -16,6 +15,7 @@ class CompaniesController < ApplicationController
 	 	f.json { render :json => @companies }
 	 	end
 	 end
+
 	 def search
 		@companies.all.title	 	
 	 end
@@ -23,6 +23,6 @@ class CompaniesController < ApplicationController
 	 end
 	private
 	def companies_params
-		params.require(:companies).permit(:title, :size, :industry, :location, :description, :url)
+		params.require(:company).permit(:industry, :location, :description, :universal_name, :logo_url, :website_url, :email_domains, :founded_year, :num_followers)
 	end
 end

@@ -1,18 +1,57 @@
 
 <br>
 <br>
-<h1> List of all Companies and their Information </h1>
-<ul>
-<% @companies.each do |x| %>
-
-  <li> <%= x.title %></li> 
-  <li><%= link_to x.url %></li>
-  <li><%=x.location %></li>
-  <li><%=x.size %></li>
-  <li><%=x.industry %></li>
-
-
-
 <br>
-<% end %>
+<br>
+<br>
+<h1> List of all Companies and their Information </h1>
+<div id="list_of_data">
+<ul>
+
+  <li><%#= @companies[6].location %></li> 
+  <li><%= @company.id %></li> 
+  
+
+  <li><%#= @companies[6].location %></li> 
+  
+
+<br>	
 </ul>
+</div>
+<div class="boxmap" id="map-canvas"></div>
+
+<div class="commentbox">
+ <!-- the comment box -->
+          <div class="well">
+            
+            <form role="form">
+              <div class="form-group">
+              <h4>Leave a Comment:</h4>
+                <textarea class="form-control1" name="body" id="commentBody" rows="3"></textarea>
+
+              </div>
+              <button type="submit" id="newcomment" value="comment" class="btn btn-primary">Submit</button>
+              <div id="new-comment">
+              </div>
+            </form>
+          </div>
+          </div>
+          <script type="text/javascript">
+  
+     var newcomment = document.getElementById("newcomment");
+      var newCommentForm = document.getElementById("new-comment")
+      var newCommentBody = document.getElementById("commentBody")
+  
+      newcomment.onclick= function(e) {
+     var str ="What is your name?";
+      var response= window.prompt("What is your name?")
+
+       e.preventDefault();
+        var p = document.createElement("p");
+      p.innerText=response + "'s " + "Comment:  "+newCommentBody.value;
+      newCommentForm.appendChild(p);
+      newCommentForm.reset();
+
+    
+  }
+</script>
