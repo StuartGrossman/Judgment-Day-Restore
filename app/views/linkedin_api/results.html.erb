@@ -11,18 +11,19 @@
 	<% v.each do |x| %>
 	<% i = 0 %>
 	<% while i <= x[1].length - 1 %>
-<h5> <%= @name = x[1][i]["headLine"].gsub('<strong>', ' ').gsub('</strong>', ' ') %> </h5>
+	<h5> 
+		<%= @name = x[1][i]["headLine"].gsub('<strong>', ' ').gsub('</strong>', ' ') %> 
+	</h5>
+	<br>
+	<img src=" <%= x[1][i]['imageUrl'] %>"/> 
 	<%= x[1][i]["subLine"] %>
-	<%= x[1][i]["id"] %>
-
+	<%= @id = x[1][i]["id"] %>
 	<br>
 	<%= x[1][i]["url"] %>
 	<br>
-	<img src=" <%= x[1][i]['imageUrl'] %>"/> 
-	<br>
 	<%= form_tag("/add", method: "get") do %>
-  	<%= label_tag(:company, "Add Company") %>
-  	<%= hidden_field_tag(:company,  @name)  %>
+  	<%= label_tag(:id, "Add Company") %>
+  	<%= hidden_field_tag(:id,  @id)  %>
   	<%= submit_tag(@name) %>
   		<% i += 1 %>
   			<% end %>
