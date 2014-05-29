@@ -27,7 +27,7 @@
 <h5> <%= @name = x[1][i]["headLine"].gsub('<strong>', ' ').gsub('</strong>', ' ') %> </h5>
 	<img src="<%= x[1][i]["imageUrl"] %>" />
   <%= x[1][i]["subLine"] %>
-	<%= @id = x[1][i]["id"] %>
+	<% @id = x[1][i]["id"] %>
 	<br>
 	<%= x[1][i]["url"] %>
 	
