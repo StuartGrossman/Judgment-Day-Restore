@@ -1,21 +1,38 @@
-<h1>RESULTS</h1>
+
+<br>
+<br>
+<br>
 <h4> Please select a Company! </h4>
+<div class="searchbox">
+<form action="/results">
+    <input class = "form-control" type="text" name="q" placeholder="Search again?"></input><br>
+    <input class="btn btn-lg btn-success" type="submit" value="Submit">
+</input><br>
+</form>
+</div>
 <% @response.each do |k,v| %>
 	<% v.each do |x| %>
 	<% i = 0 %>
 	<% while i <= x[1].length - 1 %>
+	<div class="displaybox">
+
 <h5> " <%= x[1][i]["headLine"].gsub('<strong>', ' ').gsub('</strong>', ' ') %> " </h5>
 	--------
 	<%= x[1][i]["id"] %>
 	--------
 	<%= x[1][i]["url"] %>
 	--------
-	<%= x[1][i]["imageUrl"] %>
+	<img src="<%= x[1][i]["imageUrl"] %>" />
 	--------
 	<%= x[1][i]["subLine"] %>
 	--------
 <br>
   <% i += 1 %>
+  <br>
+  <input href="/companies" class="btn btn-lg btn-success" type="submit" value="Add Company"/>
+  </div>
 		<% end %>
 	<% end %>
 <% end %>
+
+

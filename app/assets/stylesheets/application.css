@@ -104,6 +104,31 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
         margin-top:75px;
       }
 
+      .displaybox {
+background-color: rgba(45, 89, 124, 0.39);
+width: 600px;
+padding-top: 8px;
+min-height: 181px;
+text-align: center;
+border-radius: 12px 12px 12px 12px;
+box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
+margin-top: 79px;
+float: left;
+margin-left: 23px;
+}
+
+.searchbox {
+background-color: rgba(45, 89, 124, 0.39);
+width: 449px;
+padding-top: 58px;
+min-height: 181px;
+text-align: center;
+border-radius: 12px 12px 12px 12px;
+box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
+margin-top: 79px;
+display: block;
+margin-left: 23px;
+}
       /*.commentbox{
         width: 200px;
         height: 200px;

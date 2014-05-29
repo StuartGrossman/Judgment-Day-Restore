@@ -9,7 +9,7 @@ class LinkedinApiController < ApplicationController
 	 	state = '324DSFAFDS123Dsd13'
 	 	redirect_uri = "http://localhost:3000/linkedin_api/api"
 	 	company = @company_id
-	  	response = Typhoeus.get("http://www.linkedin.com/ta/federator?query=#{company}&types=company,sitefeature,email-domains")
+	  	response = Typhoeus.get("http://www.linkedin.com/ta/federator?query=#{company}&types=company,sitefeature,email-domains,description")
 	  	@response = JSON.parse(response.body)
 	  	@response.to_s
 
