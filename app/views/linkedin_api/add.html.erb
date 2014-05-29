@@ -7,7 +7,17 @@
 <br>
 <br>
 
-<%= @company_data.each do |x| %>
+<%#= @company_data.each do |x| %>
 <br>
-<%= x %>
+<%#= x %>
+<%# end %>
+
+<%= i = @company_data.length %>
+<%= @company_data.map do |k,v|%>
+
+<% hash1 = {} %>
+<%= hash1 =[v] %>
+<br>
+<%= hash = hash1 %>
 <% end %>
+<%= hash %>
