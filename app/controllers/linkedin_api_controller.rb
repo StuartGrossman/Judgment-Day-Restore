@@ -25,7 +25,6 @@ class LinkedinApiController < ApplicationController
  
 =======
      	
-
      	#@results = params[:company]
         #scope = "r_basicprofile%20r_emailaddress"
 	 	# client_id = '756wwpcnybgkfj'
@@ -37,9 +36,18 @@ class LinkedinApiController < ApplicationController
 	  # 	@response.to_s
 >>>>>>> b3735779554d2988a1b46238eb020f09bd959b80
     end
-    def show
-    	
+    def new
     end
-
+    def create
+    	@new_company = Company.create(companies_params)
+    	redirect_to @new_company
+    end
+    # def update
+    # 	@new_company.update
+    # end
+    private
+	def companies_params
+		params.require(:company).permit(:location, :description, :universal_name, :logo_url, :website_url, :email_domains, :founded_year, :num_followers)
+	end
 end
 

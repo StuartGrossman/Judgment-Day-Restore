@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 <br>
 <br>
 <br>
@@ -45,55 +43,31 @@
 	<% @num_followers = x['num_followers'] %>
 	<% end %>
 <% end %>
-<%= form_for @new_company do |f| %>
+<%= form_for @new_company, url: {action: "create"} do |f| %>
   <%= f.label :universal_name %>:
-  <%= f.text_field :universal_name, :value => @universal_name%><br />
->>>>>>> b3735779554d2988a1b46238eb020f09bd959b80
+  <%= f.text_field :universal_name, :size => "200x3", :value => @universal_name%><br />
 
   <%= f.label :description %>:
-  <%= f.text_area :description, :value => %><br />
+  <%= f.text_area :description, :size => "200x3", :value =>  @description %><br />
 
   <%= f.label :logo_url %>:
-  <%= f.text_area :logo_url, :value => %><br />
+  <%= f.text_area :logo_url, :size => "200x3", :value => @logo_url %><br />
 
   <%= f.label :website_url %>:
-  <%= f.text_area :website_url, :value => %><br />
+  <%= f.text_area :website_url, :size => "200x3", :value => @website_url %><br />
 
   <%= f.label :email_domains %>:
-  <%= f.text_area :email_domains, :value => %><br />
+  <%= f.text_area :email_domains, :size => "200x3", :value => @email_domains %><br />
 
   <%= f.label :founded_year %>:
-  <%= f.text_area :founded_year, :value => %><br />
+  <%= f.text_area :founded_year, :size => "200x3", :value => @founded_year %><br />
 
   <%= f.label :location %>:
-  <%= f.text_area :location, :value => @location %><br />
+  <%= f.text_area :location, :size => "200x3", :value => @location %><br />
 
   <%= f.label :num_followers %>:
-  <%= f.text_area :num_followers, :value => @num_followers %><br />
+  <%= f.text_area :num_followers, :size => "200x3", :value => @num_followers %><br />
 
-  <%= f.submit %>
+  <center><%= f.submit %></center>
 <% end %>
-<<<<<<< HEAD
-<%= hash %>
-=======
 
-<br>
-<%= @description%>
-<br>
-<%= @logo_url%>
-<br>
-<%= @website_url%>
-<br>
-<%= @email_domains%>
-<br>
-<%= @founded_year%>
-<br>
-<%= @industries%>
-<br>
-<%= @locations%>
-<br>
-<%= @num_followers%>
-
-
-
->>>>>>> b3735779554d2988a1b46238eb020f09bd959b80
