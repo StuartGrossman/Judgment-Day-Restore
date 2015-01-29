@@ -34,10 +34,11 @@ p {
 
 @media(min-width:767px) {
     p {
-        margin: 0 0 35px;
-        font-size: 20px;
-        line-height: 1.6;
-         color: #2a6496;
+     padding-left: 41px;
+     font-size: 25px;
+     line-height: 1.6;
+     color: #2a6496;
+     font-family: 'Josefin Sans', sans-serif;
     }
 }
 
@@ -46,6 +47,9 @@ a {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+}
+h1 {
+    font-family: 'Monoton', cursive;
 }
 
 a:hover,
@@ -137,6 +141,20 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
 }
+.searchimg {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url("http://www.listofimages.com/wallpapers/2012/05/san-francisco-cityscapes-grayscale-768x1366.jpg") no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
 
 .intro-body {
     display: table-cell;
@@ -167,7 +185,7 @@ a:focus {
     .intro-text {
         font-size: 25px;
         color: #2a6496;
-        font-family: 'Nothing You Could Do', cursive;
+        font-family: 'Josefin Sans', sans-serif;
     }
 }
 

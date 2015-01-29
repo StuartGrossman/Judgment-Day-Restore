@@ -1,12 +1,4 @@
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <% @parsed_data = [] %>
 <% @company_data.map do |x| %>
 	<% x.each do |m| %>
@@ -14,6 +6,7 @@
 	<% end %>
 <% end %>
 <% @parsed_data.each do |x| %>
+
 <% new_arr = [] %>
 	<% if x.has_key?("universal_name") %>
 	<% @universal_name = x['universal_name'] %>
@@ -43,31 +36,33 @@
 	<% @num_followers = x['num_followers'] %>
 	<% end %>
 <% end %>
+<h1 class="addname">Add <%= @universal_name %> </h1>
+<div class="companyAdd">
 <%= form_for @new_company, url: {action: "create"} do |f| %>
-  <%= f.label :universal_name %>:
-  <%= f.text_field :universal_name, :size => "200x3", :value => @universal_name%><br />
+  <%= f.label :universal_name, :class => "form-control" %>:
+  <%= f.text_field :universal_name, :size => "200x3", :value => @universal_name, :class => "form-control"%><br />
 
   <%= f.label :description %>:
-  <%= f.text_area :description, :size => "200x3", :value =>  @description %><br />
+  <%= f.text_area :description, :size => "200x3", :value =>  @description, :class => "form-control" %><br />
 
   <%= f.label :logo_url %>:
-  <%= f.text_area :logo_url, :size => "200x3", :value => @logo_url %><br />
+  <%= f.text_area :logo_url, :size => "200x3", :value => @logo_url, :class => "form-control" %><br />
 
   <%= f.label :website_url %>:
-  <%= f.text_area :website_url, :size => "200x3", :value => @website_url %><br />
+  <%= f.text_area :website_url, :size => "200x3", :value => @website_url, :class => "form-control" %><br />
 
   <%= f.label :email_domains %>:
-  <%= f.text_area :email_domains, :size => "200x3", :value => @email_domains %><br />
+  <%= f.text_area :email_domains, :size => "200x3", :value => @email_domains, :class => "form-control" %><br />
 
   <%= f.label :founded_year %>:
-  <%= f.text_area :founded_year, :size => "200x3", :value => @founded_year %><br />
+  <%= f.text_area :founded_year, :size => "200x3", :value => @founded_year, :class => "form-control" %><br />
 
   <%= f.label :location %>:
-  <%= f.text_area :location, :size => "200x3", :value => @location %><br />
+  <%= f.text_area :location, :size => "200x3", :value => @locations, :class => "form-control" %><br />
 
   <%= f.label :num_followers %>:
-  <%= f.text_area :num_followers, :size => "200x3", :value => @num_followers %><br />
+  <%= f.text_area :num_followers, :size => "200x3", :value => @num_followers, :class => "form-control" %><br />
 
   <center><%= f.submit %></center>
 <% end %>
-
+</div>

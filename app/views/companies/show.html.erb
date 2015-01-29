@@ -1,44 +1,32 @@
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1> List of all Companies and their Information </h1>
-<div id="list_of_data">
-<ul>
 
-  <li><%#= @companies[6].location %></li> 
-  <li><%= @company.id %></li> 
-  
 
-  <li><%#= @companies[6].location %></li> 
-  
-
-<br>	
-</ul>
-</div>
 <div class="boxmap" id="map-canvas"></div>
+<div class="companyinfo">
+<h1> <%= @company.universal_name %> </h1>
 
+  <!-- <p><%= @company.industry %></p>  -->
+  <p>Address: <%= @company.location %></p> 
+  <p>About us: <%= @company.description %></p>
+  <p><img src='<%= @company.logo_url %>'/></p>
+  <p><%= @company.website_url %></p>
+  <p><%=  @company.email_domains %><a/></p>
+  <p>YEAR FOUNDED:<%= @company.founded_year %></p>
+
+</div>
 <div class="commentbox">
- <!-- the comment box -->
-          <div class="well">
-            
-            <form role="form">
-              <div class="form-group">
+ 
               <h4>Leave a Comment:</h4>
                 <textarea class="form-control1" name="body" id="commentBody" rows="3"></textarea>
 
-              </div>
+           
               <button type="submit" id="newcomment" value="comment" class="btn btn-primary">Submit</button>
-              <div id="new-comment">
+              <div  id="new-comment">
               </div>
-            </form>
-          </div>
-          </div>
-          <script type="text/javascript">
-  
-     var newcomment = document.getElementById("newcomment");
+</div>
+
+<script type="text/javascript">
+        var newcomment = document.getElementById("newcomment");
       var newCommentForm = document.getElementById("new-comment")
       var newCommentBody = document.getElementById("commentBody")
   
@@ -47,11 +35,13 @@
       var response= window.prompt("What is your name?")
 
        e.preventDefault();
-        var p = document.createElement("p");
+        var p = document.createElement("div");
+        p.className = "comment";
       p.innerText=response + "'s " + "Comment:  "+newCommentBody.value;
       newCommentForm.appendChild(p);
       newCommentForm.reset();
 
     
   }
-</script>
+
+    </script>

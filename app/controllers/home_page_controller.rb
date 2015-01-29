@@ -1,13 +1,15 @@
 class HomePageController < ApplicationController
-	  def search
-      @companies = Company.where(universal_name: params[:q])
+  def search
+    @companies = Company.where(universal_name: params[:q])
     @search = SimpleSearch.new SimpleSearch.get_params(params)
    
-    if @search.valid?
-      @companies = @search.search_within Company.all, :title
-    else
-      flash[:errors]=@search.errors.full_messages
+    puts params[:q]
 
+    if @search.invalid? 
+      flash[:errors]="Not a valid search";
+    else
+      @search.valid?
+      @companies = @search.search_within Company.all, :title
     end
   end
 end

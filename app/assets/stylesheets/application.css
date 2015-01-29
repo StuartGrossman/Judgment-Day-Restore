@@ -1,135 +1,186 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require_bootstrap
- */
+  /*
+   * This is a manifest file that'll be compiled into application.css, which will include all the files
+   * listed below.
+   *
+   * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+   * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+   *
+   * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+   * compiled file so the styles you add here take precedence over styles defined in any styles
+   * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+   * file per style scope.
+   *
+   *= require_tree .
+   *= require_self
+   *= require_bootstrap
+   */
 
-.box1 {
-  background-color: rgba(0, 0, 0, 0.61);
+   body
+   {
+     margin-top: 100px;
+   }
+
+  .box1 {
+    background-color: rgba(0, 0, 0, 0.61);
+  width: 600px;
+  padding-top: 24px;
+  min-height: 150px;
+  margin-left: 370px;
+  text-align: center;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
+  padding-bottom: 50px;
+  margin-top: 79px;
+  }
+
+  .boxmap {
+    width: 600px;
+    min-height: 432px;
+    float: right;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
+    margin-top: 126px;
+    margin-right: 40px;
+  }
+
+  .small {
+      font-color:black;
+  }
+
+  .searchCompany {
+  margin-top: 10px;
+  border-radius: 12px 12px 12px 12px;
+  font-size: 20px;
+  }
+
+   html, body, #map-canvas {
+          height: 75%;
+         display: inline;
+          padding: 0px
+        }
+        .controls {
+          margin-top: 16px;
+          border: 1px solid transparent;
+          border-radius: 2px 0 0 2px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          height: 32px;
+          outline: none;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        #type-selector {
+          color: #fff;
+          background-color: #4d90fe;
+          padding: 5px 11px 0px 11px;
+        }
+
+        #type-selector label {
+          font-family: Roboto;
+          font-size: 13px;
+          font-weight: 300;
+        }
+
+.form-control1 {
+  display: inline-block;
+width: 47%;
+height: 34px;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.428571429;
+color: #8A8888;
+vertical-align: middle;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 4px;
+padding-bottom: 50px;
+ }
+
+        .foo {
+          margin-top:75px;
+        }
+
+        .displaybox {
+  background-color: rgba(45, 89, 124, 0.39);
+  width: 600px;
+  padding-top: 8px;
+  min-height: 181px;
+  text-align: center;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
+  margin-top: 79px;
+  float: left;
+  margin-left: 23px;
+  }
+
+  .searchbox {
+  background-color: rgba(45, 89, 124, 0.39);
+  width: 723px;
+  padding-top: 58px;
+  min-height: 181px;
+  text-align: center;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
+  margin-top: 79px;
+  display: block;
+  margin-left: 23px;
+  }
+
+  .companyAdd {
+    background-color: #428bca;
+  width: 600px;
+  padding-top: 24px;
+  min-height: 150px;
+  margin-left: 325px;
+  text-align: center;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
+  padding-bottom: 50px;
+  margin-top: 79px;
+  margin-right: 40px;
+  }
+
+.companyinfo {
+  background-color: rgba(252, 237, 237, 0.61);
 width: 600px;
-padding-top: 24px;
+padding-top: 10px;
 min-height: 150px;
-margin-left: 370px;
+margin-left: 33px;
 text-align: center;
 border-radius: 12px 12px 12px 12px;
 box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
 padding-bottom: 50px;
-margin-top: 79px;
-}
+margin-top: 128px;
+margin-right: 40px;
+  }
+  .addname {
+    text-align: center;
+  }
 
-.boxmap {
-  background-color: rgba(0, 0, 0, 0.61);
-width: 600px;
+  .commentbox {
+background-color: rgba(0, 0, 0, 0.61);
+  width: 600px;
+  padding-top: 24px;
+  min-height: 150px;
+  margin-left: 325px;
+  text-align: center;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
+  padding-bottom: 50px;
+  margin-top: 79px;
+  margin-right: 40px;
+
+  }
+  .comment {
+    background-color: rgba(0, 0, 0, 0.61);
+width: 415px;
 padding-top: 24px;
 min-height: 150px;
-float: right;
+margin-left: 39px;
 text-align: center;
 border-radius: 12px 12px 12px 12px;
 box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
 padding-bottom: 50px;
 margin-top: 79px;
 margin-right: 40px;
-}
-
-.small {
-    font-color:black;
-}
-
-.searchCompany {
-margin-top: 10px;
-border-radius: 12px 12px 12px 12px;
-font-size: 20px;
-}
-
- html, body, #map-canvas {
-        height: 75%;
-       display: inline;
-        padding: 0px
-      }
-      .controls {
-        margin-top: 16px;
-        border: 1px solid transparent;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        height: 32px;
-        outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      }
-
-      #type-selector {
-        color: #fff;
-        background-color: #4d90fe;
-        padding: 5px 11px 0px 11px;
-      }
-
-      #type-selector label {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-      }
-
-      .form-control1 {
-        margin-top: 500px;
-        display: block;
-width: 47%;
-height: 34px;
-padding: 6px 12px;
-font-size: 14px;
-line-height: 1.428571429;
-color: #555;
-vertical-align: middle;
-background-color: #fff;
-background-image: none;
-border: 1px solid #ccc;
-border-radius: 4px;
--webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
--webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-      }
-
-      .foo {
-        margin-top:75px;
-      }
-
-      .displaybox {
-background-color: rgba(45, 89, 124, 0.39);
-width: 600px;
-padding-top: 8px;
-min-height: 181px;
-text-align: center;
-border-radius: 12px 12px 12px 12px;
-box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
-margin-top: 79px;
-float: left;
-margin-left: 23px;
-}
-
-.searchbox {
-background-color: rgba(45, 89, 124, 0.39);
-width: 449px;
-padding-top: 58px;
-min-height: 181px;
-text-align: center;
-border-radius: 12px 12px 12px 12px;
-box-shadow: 3px 10px 10px 10px rgba(0, 0, 0, 0.26);
-margin-top: 79px;
-display: block;
-margin-left: 23px;
-}
-      /*.commentbox{
-        width: 200px;
-        height: 200px;
-      }*/
+  }

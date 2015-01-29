@@ -19,3 +19,19 @@
 //= require_self
 
 
+ var newcomment = document.getElementById("newcomment");
+      var newCommentForm = document.getElementById("new-comment")
+      var newCommentBody = document.getElementById("commentBody")
+  
+      newcomment.onclick= function(e) {
+     var str ="What is your name?";
+      var response= window.prompt("What is your name?")
+
+       e.preventDefault();
+        var p = document.createElement("p");
+      p.innerText=response + "'s " + "Comment:  "+newCommentBody.value;
+      newCommentForm.appendChild(p);
+      newCommentForm.reset();
+
+    
+  }
